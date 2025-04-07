@@ -1,4 +1,3 @@
-/* Global & Base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Montserrat;
   background-color: #fff;
 }
 
@@ -16,7 +15,7 @@ body {
   top: 0;
   right: 0;
   width: 45%;
-  height: 100%;
+  height: 97vh;
   background-color: #fde68a;
   z-index: -1;
   border-top-left-radius: 200px;
@@ -50,22 +49,24 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 24px 60px;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
+  background-color: rgba(253, 230, 138,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 700;
-  font-size: 22px;
-  color: #facc15;
+  
   margin-left: 100px;
 }
 
 .logo img {
-  width: 30px;
+  width: 70px;
+  height: 70px;
 }
 
 nav {
@@ -77,10 +78,11 @@ nav {
 
 nav a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: #1f1f1f;
 }
+
 
 nav a.active {
   color: #facc15;
@@ -146,7 +148,7 @@ nav a.active {
     padding-top: 70px;
   }
   .logo {
-    margin-left: 0;
+  display: none;
   }
 }
 
@@ -285,7 +287,8 @@ nav a.active {
   }
   .hero-right img.doctor {
        height: auto;
-       width: 80%;  object-fit: contain;
+       width: 100%;  object-fit: contain;
+       margin-top:5rem;
         }
         .chart-box, .shape-blue,.shape-pink{   
           display: none; 
@@ -295,7 +298,7 @@ nav a.active {
 
       }
 
-    /* Courses Section (same as سابقًا) */
+    /* Courses Section  */
     .courses-section {
       padding: 60px;
       background-color: #fff;
@@ -453,9 +456,7 @@ nav a.active {
       background-color: #facc15;
       color: white;
     }
-  /* =========================
-   JOIN Section
-========================= */
+   /* JOIN Section */
 .join-section {
   background-color: #fffdf3;
   padding: 60px 20px;
@@ -512,12 +513,13 @@ nav a.active {
 }
 
 /* =========================
-   Footer Section
-========================= */
+  /* Footer Section */
 .site-footer {
   background-color: #fff;
   padding: 40px 20px;
 }
+
+/* الحاوية الرئيسية للفوتر */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -526,22 +528,25 @@ nav a.active {
   margin: 0 auto;
   gap: 30px;
 }
+
+/* كل عمود داخل الفوتر */
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* الشعار */
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 20px;
-  color: #facc15;
+  justify-content: center;
 }
 .footer-logo img {
-  width: 40px;
+  width: 100px;
+  
 }
-.footer-info,
-.footer-contact {
-  flex: 1;
-  min-width: 200px;
-}
+
+/* عناوين الأعمدة */
 .footer-info h4,
 .footer-contact h4 {
   font-size: 16px;
@@ -549,10 +554,13 @@ nav a.active {
   margin-bottom: 12px;
   color: #1f2937;
 }
+
+/* القوائم */
 .footer-info ul,
 .footer-contact ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .footer-info li,
 .footer-contact li {
@@ -560,10 +568,14 @@ nav a.active {
   color: #4b5563;
   margin-bottom: 8px;
 }
+
+/* أيقونات بيانات التواصل */
 .footer-contact li i {
   color: #facc15;
   margin-right: 8px;
 }
+
+/* روابط القائمة */
 .footer-info a {
   text-decoration: none;
   color: #4b5563;
@@ -571,6 +583,8 @@ nav a.active {
 .footer-info a:hover {
   color: #facc15;
 }
+
+/* أسفل الفوتر */
 .footer-bottom {
   text-align: center;
   font-size: 14px;
@@ -585,4 +599,21 @@ nav a.active {
 }
 .footer-bottom a:hover {
   color: #facc15;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column {
+    min-width: 100%;
+  }
+  .footer-logo {
+    justify-content: center;
+    margin-bottom: 20px;
+   
+  }
 }
