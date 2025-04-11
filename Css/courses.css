@@ -1,0 +1,209 @@
+* 
+{
+  margin: 0;
+ padding: 0; 
+ box-sizing: border-box;
+}
+body {font-family: Montserrat; color: #333; background: #fff;}
+img {display: block; max-width: 100%;}
+
+.courses-search-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 40px;
+  gap: 20px;
+}
+.search-left, .search-right {
+  flex: 1;
+  min-width: 280px;
+}
+.search-left h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.filter-buttons button {
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background: #FFD85E;
+  border-color: #FFD85E;
+  color: #fff;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  max-width: 600px;
+  width: 100%;
+}
+.search-bar i {color: #ccc; margin-right: 10px;}
+.search-bar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+.search-bar button {
+  background: #FFD85E;
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.courses-section {padding: 40px 50px;}
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+@media (max-width: 1024px) {
+  .courses-grid {grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 768px) {
+  .courses-grid {grid-template-columns: 1fr;}
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+.card:hover {transform: translateY(-5px);}
+.card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card:hover .card-image img {transform: scale(1.03);}
+.featured {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #00c194;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+.card-actions {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  gap: 10px;
+  margin-left:40%;
+  
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {padding: 20px;}
+.year-rating {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.year {font-size: 14px; color: #777;}
+.rating {
+  background: #333;
+  color: #f1c40f;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 3px 8px;
+}
+.course-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1b1d21;
+}
+.course-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+.course-subscribers {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+.course-price del {color: #ccc; margin-right: 10px;}
+.new-price {color: #f1c40f; font-weight: 700;}
+.view-course {
+  background: #fff;
+  color: #FFD85E;
+  border: 2px solid #FFD85E;
+  padding: 12px 30px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.view-course:hover {
+  background: #FFD85E;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+.pagination button {
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.pagination button:hover,
+.pagination button.active {
+  background: #FFD85E;
+  color: #fff;
+  border-color: #FFD85E;
+}

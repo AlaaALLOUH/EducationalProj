@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Css/contact-us.css">
+  <link rel="stylesheet" href="Css/layout.css">
+  <script src="Js/header.js" defer></script>
+
+
+
+
+</head>
+<body>
+    <div class="background-yellow"></div>
+    <div class="logo-background"></div>
+  
+    <header>
+      <div class="logo">
+        <img src="Images/Vector.png" alt="logo">
+       
+      </div>
+      <!-- زر الهامبورغر يظهر فقط على الموبايل -->
+      <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+      <nav id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about-us.html">About US</a>
+        <a href="courses.html">Course</a>
+        <a href="contact-us.html" class="active">Contact us</a>
+      </nav>
+      <div class="nav-right" id="nav-right">
+      
+        <a href="#" class="join-btn">👨‍🏫Account</a>
+      </div>
+    </header>
+  <!-- Contact Section -->
+ 
+ <section class="contact-section">
+  <div class="container">
+    <h1>Contact us</h1>
+    <span><p>Any question or remarks? Just write us a message!</p></span>
+    <div class="row shadow rounded overflow-hidden">
+
+      <!-- Left Side -->
+      <div class="col-md-5 bg-dark text-white p-4 d-flex flex-column justify-content-between">
+        <div>
+          <h4 class="fw-bold">Contact Information</h4>
+          <p class="text-light">Say something to start a live chat!</p>
+          <ul class="list-unstyled mt-5 pt-4">
+            <li class="mb-3"><i class="fas fa-phone me-2"></i> (02) 01032189720</li>
+            <li class="mb-3"><i class="fas fa-envelope me-2"></i> simplify@simplify.com</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i> Shark district, Port Said, Egypt</li>
+          </ul>
+        </div>
+        <div class="social-icons mt-4">
+          <a href="#" class="text-warning me-3 fs-4"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-warning me-3 fs-4"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-warning fs-4"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-md-7 bg-white p-4">
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">First Name</label>
+              <input type="text" class="form-control" placeholder="John">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Last Name</label>
+              <input type="text" class="form-control" placeholder="Doe">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="example@email.com">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Phone Number</label>
+              <input type="text" class="form-control" placeholder="+1 012 3456 789">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label d-block">Select Subject?</label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="subject" id="general" checked>
+              <label class="form-check-label" for="general">General Inquiry</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="subject" id="support">
+              <label class="form-check-label" for="support">Technical Support</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="subject" id="courses">
+              <label class="form-check-label" for="courses">Course Request</label>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Write your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark px-4 py-2">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="footer-container">
+      <!-- شعار الموقع -->
+      <div class="footer-logo">
+        <img src="Images/Vector.png" alt="logo">
+      </div>
+      <!-- معلومات الشركة -->
+      <div class="footer-info">
+        <h4>Company Info</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About US</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Contact US</a></li>
+        </ul>
+      </div>
+      <!-- بيانات التواصل -->
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><i class="fas fa-phone"></i> (02) 01032189720</li>
+          <li><i class="fas fa-map-marker-alt"></i> shark district, port said, Egypt</li>
+          <li><i class="fas fa-envelope"></i> simplify@simplify.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 simplify | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+    </div>
+  </footer>
+  
+</body>
+</html>

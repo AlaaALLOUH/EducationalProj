@@ -1,0 +1,363 @@
+
+/* Course Details Page */
+.container {
+  padding: 50px;
+  font-family: Montserrat;
+  font-size: larger;
+}
+
+.header-course {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 15px;
+}
+
+.tabs {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+  border-bottom: 2px solid #eee;
+  flex-wrap: wrap;
+}
+
+.tabs div {
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.tabs .active {
+  font-weight: bold;
+  color: #f1c40f;
+  border-bottom: 3px solid #f1c40f;
+}
+
+.card {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  width: 75%;
+  flex: 1;
+}
+.card p{
+  opacity: 0.9;
+  
+}
+ul li{
+  opacity: 0.8;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 2rem 1.5rem;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin-left: 2rem;
+  margin-top: 20px;
+  width: 22%;
+  flex-shrink: 0;
+}
+
+.key-box {
+  background: #fff8e1;
+  border-left: 4px solid #f1c40f;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+}
+
+.progress-bar {
+  background: #eee;
+  border-radius: 4px;
+  height: 6px;
+  margin: 0.5rem 0 1rem;
+}
+
+.progress-fill {
+  background: #f1c40f;
+  height: 100%;
+  width: 33%;
+  border-radius: 4px;
+}
+
+.lecture-list {
+  list-style: none;
+  padding: 0;
+}
+
+.lecture-list li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.lecture-list li span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #ccc;
+}
+
+.lecture-list li.active span {
+  background: #f1c40f;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.bookmark {
+  background: #fff;
+  border: 2px solid #111;
+  padding: 20px;
+}
+
+.btn.complete {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cardside {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .cardside {
+    flex-direction: column;
+  }
+
+  .card,
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .sidebar {
+    margin-top: 2rem;
+  }
+}
+/* slide-course */
+.slide-content {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.slide-image {
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+.slide-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.prev {
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.next {
+  background: #000;
+  color: white;
+}
+
+.prev:hover {
+  background: #eee;
+}
+
+.next:hover {
+  background: #333;
+}
+a{
+  color: #000;
+  text-decoration: none;
+}
+/* slide-Quiz */
+.quiz-container {
+ 
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.question-box {
+  background-color: #fff9e6;
+  padding: 30px;
+  border-left: 5px solid #f4c531;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.question-box h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #222;
+  position: relative;
+  padding-left: 35px;
+}
+
+.options input[type="radio"] {
+  position: absolute;
+  left: 0;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f4c531;
+  border-radius: 50%;
+  outline: none;
+  transition: 0.2s all ease-in-out;
+}
+
+.options input[type="radio"]:checked {
+  background-color: #f4c531;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+/* resources-slide */
+.resources {
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.resources h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.resource-card {
+  background-color: #fff9e6;
+  border-left: 4px solid #ffd700;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.resource-card p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #333;
+}
+
+               
+        

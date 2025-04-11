@@ -1,0 +1,540 @@
+/******************************************
+   RESET & BASE STYLES
+******************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+}
+
+/* صور تملأ العنصر */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+   /* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: relative;
+  z-index: 10;
+}
+
+header .logo img {
+  /* تنسيق الشعار */
+}
+
+header nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+header nav a.active {
+  color: #FFD85E;
+}
+
+.nav-right a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* زر القائمة للموبايل */
+.menu-toggle {
+  display: none;
+}
+
+/******************************************
+   HERO SECTION
+******************************************/
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-left {
+  width: 55%;
+}
+
+.hero-left h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+  max-width: 550px;
+}
+
+.hero-left p {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.search-box {
+  display: flex;
+  border: 2px solid #facc15;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  background: #facc15;
+  color: #fff;
+  border: none;
+  padding: 0 28px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.browse-btn {
+  background: #111;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.hero-right {
+  width: 45%;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+.chart-box {
+  position: absolute;
+  top: 200px;
+  left: -100px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.chart-box img {
+  width: 180px;
+}
+
+.hero-right img.doctor {
+
+  height: 430px;
+}
+
+.shape-blue {
+  position: absolute;
+  top: 30%;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: #e0f2fe;
+  border-top-left-radius: 60px;
+}
+
+.shape-pink {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 60px;
+  height: 60px;
+  background: #fce7f3;
+  border-top-right-radius: 60px;
+}
+
+/* Mobile adjustments for Hero */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+  }
+  .hero-left {
+    text-align: center;
+  }
+  .hero-left h1, .hero-left p {
+    max-width: 100%;
+  }
+  .hero-right {
+    order: 1;
+    margin-top: 20px;
+    padding: 100px;
+  }
+  .hero-right img.doctor {
+    width: 100%;
+    height:350px;
+    object-fit: contain;
+    margin-top:0px 
+  }
+  .chart-box,
+  .shape-blue,
+  .shape-pink {
+    display: none;
+  }
+  .background-yellow {
+    height: 100vh; 
+  }}
+
+   /* COURSES SECTION */
+
+.courses-section {
+  padding: 40px 50px;
+}
+
+.courses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.courses-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.courses-header h2 span {
+  color: #FFD85E;
+}
+
+.courses-header a {
+  text-decoration: none;
+  color: #FFD85E;
+  font-weight: 600;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+}
+
+
+   /* CARD (COURSE CARD) */
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.03);
+}
+
+.featured {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #00c194;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.card-actions {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn i {
+  font-size: 16px;
+  color: #333;
+}
+
+.action-btn:hover {
+  background-color: #f1c40f;
+  color: #fff;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.year-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.year {
+  font-size: 14px;
+  color: #777;
+}
+
+.rating {
+  font-size: 14px;
+  color: #f1c40f;
+  font-weight: 600;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.rating i {
+  margin-right: 5px;
+}
+
+.course-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1b1d21;
+}
+
+.course-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.course-subscribers {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.course-price {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.course-price del {
+  color: #ccc;
+  margin-right: 10px;
+}
+
+.new-price {
+  color: #f1c40f;
+  font-weight: 700;
+}
+/* Join Button inside the cart */
+.join {
+  background-color: #fff;
+  color: #FFD85E;
+  border: 2px solid #FFD85E;
+  padding: 12px 30px;
+  border-radius: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  
+}
+
+.join:hover {
+  background-color: #FFD85E;
+  color: #fff;
+}
+
+/* Join us section */
+.join-us {
+  background-color: #fef9f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.join-us .tagline {
+  font-size: 16px;
+  color: #FFD85E;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.join-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.join-subtext {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.join-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.join-form input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #ddd;
+  border-right: none;
+  border-radius: 30px 0 0 30px;
+  font-size: 14px;
+  outline: none;
+}
+
+.join-form input::placeholder {
+  color: #aaa;
+}
+
+.join-form button {
+  background-color: #FFD85E;
+  border: 2px solid #FFD85E;
+  color: #fff;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 0 30px 30px 0;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.join-form button:hover {
+  background-color: #e0ba49;
+}
+
+
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .courses-section {
+    padding: 20px 30px;
+  }
+  
+  /* إعادة ترتيب قسم Hero في الجوال */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .search-box,
+  .hero-left h1,
+  .hero-left p {
+    max-width: 100%;
+  }
+  
+  .hero-right {
+    order: 1;
+    margin-top: 20px;
+    padding: 0;
+  }
+  
+  .hero-right img.doctor {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 5rem;
+  }
+  
+  .chart-box, .shape-blue, .shape-pink {
+    display: none;
+  }
+  
+  /* إعادة ترتيب قسم Join Us */
+  .join-form {
+    flex-direction: column;
+  }
+  
+  .join-form input {
+    border-radius: 30px;
+    margin-bottom: 10px;
+    border-right: 2px solid #ddd;
+  }
+  
+  .join-form button {
+    border-radius: 30px;
+  }
+}
