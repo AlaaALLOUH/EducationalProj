@@ -1,6 +1,5 @@
 .about-section {
-  padding: 60px 15px;
-  font-family: Montserrat;
+  padding: 50px 15px;
 }
 
 /* About title */
@@ -11,21 +10,21 @@
   font-size: 1.75rem;
 }
 
- /* About Paragraph Text */
+/* About Paragraph Text */
 .about-text {
   color: #444;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 0;
+  
 }
 
- /* Background Highlight for Images or Containers */
+/* Background Highlight for Containers */
 .bg-highlight {
   border-radius: 20px;
   overflow: hidden;
 }
 
- /* Rounded Images  */
+/* Rounded Images */
 .img-rounded {
   border-radius: 20px;
   object-fit: cover;
@@ -35,6 +34,6 @@
 
 @media (max-width: 768px) {
   .about-section {
-   padding-top:0px ;
+   padding-top: 0px;
   }
 }

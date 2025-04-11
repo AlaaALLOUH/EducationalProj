@@ -1,62 +1,4 @@
 /******************************************
-   RESET & BASE STYLES
-******************************************/
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
-}
-
-/* صور تملأ العنصر */
-img {
-  display: block;
-  max-width: 100%;
-}
-
-
-
-   /* HEADER */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 50px;
-  position: relative;
-  z-index: 10;
-}
-
-header .logo img {
-  /* تنسيق الشعار */
-}
-
-header nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-}
-
-header nav a.active {
-  color: #FFD85E;
-}
-
-.nav-right a {
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* زر القائمة للموبايل */
-.menu-toggle {
-  display: none;
-}
-
-/******************************************
    HERO SECTION
 ******************************************/
 .hero {
@@ -132,6 +74,10 @@ header nav a.active {
   z-index: 1;
 }
 
+.hero-right img.doctor {
+  height: 430px;
+}
+
 .chart-box {
   position: absolute;
   top: 200px;
@@ -146,69 +92,31 @@ header nav a.active {
   width: 180px;
 }
 
-.hero-right img.doctor {
-
-  height: 430px;
+.shape-blue,
+.shape-pink {
+  position: absolute;
+  width: 60px;
+  height: 60px;
 }
 
 .shape-blue {
-  position: absolute;
   top: 30%;
   right: 40px;
-  width: 60px;
-  height: 60px;
   background: #e0f2fe;
   border-top-left-radius: 60px;
 }
 
 .shape-pink {
-  position: absolute;
   top: 30px;
   left: 40px;
-  width: 60px;
-  height: 60px;
   background: #fce7f3;
   border-top-right-radius: 60px;
 }
 
-/* Mobile adjustments for Hero */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-  }
-  .hero-left, .hero-right {
-    width: 100%;
-  }
-  .hero-left {
-    text-align: center;
-  }
-  .hero-left h1, .hero-left p {
-    max-width: 100%;
-  }
-  .hero-right {
-    order: 1;
-    margin-top: 20px;
-    padding: 100px;
-  }
-  .hero-right img.doctor {
-    width: 100%;
-    height:350px;
-    object-fit: contain;
-    margin-top:0px 
-  }
-  .chart-box,
-  .shape-blue,
-  .shape-pink {
-    display: none;
-  }
-  .background-yellow {
-    height: 100vh; 
-  }}
 
-   /* COURSES SECTION */
-
+/******************************************
+   COURSES SECTION
+******************************************/
 .courses-section {
   padding: 40px 50px;
 }
@@ -226,14 +134,11 @@ header nav a.active {
   color: #333;
 }
 
-.courses-header h2 span {
-  color: #FFD85E;
-}
-
+.courses-header h2 span,
 .courses-header a {
-  text-decoration: none;
   color: #FFD85E;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .courses-grid {
@@ -244,8 +149,9 @@ header nav a.active {
 }
 
 
-   /* CARD (COURSE CARD) */
-
+/******************************************
+   COURSE CARD
+******************************************/
 .card {
   background: #fff;
   border-radius: 15px;
@@ -305,7 +211,6 @@ header nav a.active {
   background-color: rgba(255, 255, 255, 0.95);
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
@@ -358,17 +263,16 @@ header nav a.active {
   color: #1b1d21;
 }
 
-.course-description {
+.course-description,
+.course-subscribers {
   font-size: 14px;
-  color: #555;
   line-height: 1.6;
-  margin-bottom: 15px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
 .course-subscribers {
-  font-size: 14px;
   color: #999;
-  margin-bottom: 10px;
 }
 
 .course-price {
@@ -385,7 +289,7 @@ header nav a.active {
   color: #f1c40f;
   font-weight: 700;
 }
-/* Join Button inside the cart */
+
 .join {
   background-color: #fff;
   color: #FFD85E;
@@ -398,7 +302,6 @@ header nav a.active {
   text-transform: uppercase;
   transition: all 0.3s ease;
   text-decoration: none;
-  
 }
 
 .join:hover {
@@ -406,7 +309,10 @@ header nav a.active {
   color: #fff;
 }
 
-/* Join us section */
+
+/******************************************
+   JOIN US SECTION
+******************************************/
 .join-us {
   background-color: #fef9f0;
   padding: 60px 20px;
@@ -476,65 +382,67 @@ header nav a.active {
 }
 
 
-
-/* Responsive design */
-@media screen and (max-width: 1024px) {
+/******************************************
+   MEDIA QUERIES
+******************************************/
+@media (max-width: 1024px) {
   .courses-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 600px) {
-  .courses-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .courses-section {
-    padding: 20px 30px;
-  }
-  
-  /* إعادة ترتيب قسم Hero في الجوال */
+@media (max-width: 768px) {
   .hero {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
   }
-  
-  .search-box,
-  .hero-left h1,
-  .hero-left p {
-    max-width: 100%;
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    text-align: center;
   }
-  
+
   .hero-right {
     order: 1;
-    margin-top: 20px;
     padding: 0;
   }
-  
+
   .hero-right img.doctor {
     width: 100%;
     height: auto;
     object-fit: contain;
-    margin-top: 5rem;
+    margin-top:15rem
   }
-  
-  .chart-box, .shape-blue, .shape-pink {
+
+  .chart-box,
+  .shape-blue,
+  .shape-pink {
     display: none;
   }
-  
-  /* إعادة ترتيب قسم Join Us */
+
   .join-form {
     flex-direction: column;
   }
-  
+
   .join-form input {
     border-radius: 30px;
     margin-bottom: 10px;
     border-right: 2px solid #ddd;
   }
-  
+
   .join-form button {
     border-radius: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-section {
+    padding: 20px 30px;
   }
 }

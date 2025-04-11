@@ -3,16 +3,21 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
   background-color: #fff;
 }
 
-   /* BACKGROUND ELEMENTS */
-/* خلفية الصفحة الصفراء */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/******************************************
+   BACKGROUND ELEMENTS
+******************************************/
 .background-yellow {
   position: absolute;
   top: 0;
@@ -25,7 +30,6 @@ body {
   border-bottom-right-radius: 80px;
 }
 
-/* خلفية الشعار */
 .logo-background {
   position: absolute;
   top: 0;
@@ -47,7 +51,9 @@ body {
   }
 }
 
-   /* HEADER */
+/******************************************
+   HEADER
+******************************************/
 header {
   display: flex;
   justify-content: space-between;
@@ -58,20 +64,19 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* شعار الموقع */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 100px;
 }
 
 .logo img {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
+  margin-left: 100px;
 }
 
-/* قائمة التنقل */
+/* التنقل */
 nav {
   display: flex;
   gap: 40px;
@@ -91,7 +96,7 @@ nav a.active {
   font-weight: 700;
 }
 
-/* الجانب الأيمن من الهيدر */
+/* عناصر اليمين */
 .nav-right {
   display: flex;
   gap: 20px;
@@ -114,7 +119,7 @@ nav a.active {
   display: inline-block;
 }
 
-/* زر القائمة (الهامبورغر) - مخفي افتراضيًا على الشاشات الكبيرة */
+/* زر الهامبورغر */
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -124,8 +129,9 @@ nav a.active {
   color: #1f1f1f;
 }
 
-
-   /* MEDIA QUERIES (للشاشات الصغيرة) */
+/******************************************
+   HEADER – Responsive
+******************************************/
 @media (max-width: 768px) {
   .menu-toggle {
     display: block !important;
@@ -134,8 +140,7 @@ nav a.active {
     right: 20px;
     z-index: 11;
   }
-  
-  /* إخفاء القائمة والجزء الأيمن افتراضيًا */
+
   nav,
   .nav-right {
     display: none;
@@ -144,127 +149,126 @@ nav a.active {
     background-color: #fff;
     padding: 10px 0;
   }
-  
-  /* عند تفعيل زر القائمة (active) تظهر القائمة والجانب الأيمن */
+
   nav.active,
   .nav-right.active {
     display: flex;
   }
-  
-  /* تعديل ترتيب الهيدر ليكون عموديًا */
+
   header {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
   }
-  
-  .logo {
-   margin-right: 350px;
-   
-   
+
+
+  .logo img {
+    width: 70px;
+    height: 70px;
+    margin-left: 30px;
   }
 }
 
-
-  /* Footer section  */
+/******************************************
+   FOOTER SECTION
+******************************************/
 .site-footer {
-    background-color: #fff;
-    padding: 40px 20px;
-  }
-  
-  /* الحاوية الرئيسية للفوتر */
+  background-color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-info h4,
+.footer-contact h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.footer-info ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-info li,
+.footer-contact li {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.footer-contact li i {
+  color: #facc15;
+  margin-right: 8px;
+}
+
+.footer-info a {
+  text-decoration: none;
+  color: #4b5563;
+}
+
+.footer-info a:hover {
+  color: #facc15;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  color: #6b7280;
+  border-top: 1px solid #eee;
+}
+
+.footer-bottom a {
+  color: #1f2937;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+  color: #facc15;
+}
+
+/* Footer Responsive */
+@media (max-width: 768px) {
   .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
-  }
-  
-  /* كل عمود داخل الفوتر */
-  .footer-column {
-    flex: 1;
-    min-width: 250px;
-  }
-  
-  /* الشعار */
-  .footer-logo {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-  }
-  .footer-logo img {
-    width: 150px;
-    
-  }
-  
-  /* عناوين الأعمدة */
-  .footer-info h4,
-  .footer-contact h4 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: #1f2937;
-  }
-  
-  /* القوائم */
-  .footer-info ul,
-  .footer-contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .footer-info li,
-  .footer-contact li {
-    font-size: 14px;
-    color: #4b5563;
-    margin-bottom: 8px;
-  }
-  
-  /* أيقونات بيانات التواصل */
-  .footer-contact li i {
-    color: #facc15;
-    margin-right: 8px;
-  }
-  
-  /* روابط القائمة */
-  .footer-info a {
-    text-decoration: none;
-    color: #4b5563;
-  }
-  .footer-info a:hover {
-    color: #facc15;
-  }
-  
-  /* أسفل الفوتر */
-  .footer-bottom {
     text-align: center;
-    font-size: 14px;
-    padding: 20px;
-    color: #6b7280;
-    border-top: 1px solid #eee;
   }
-  .footer-bottom a {
-    color: #1f2937;
-    text-decoration: none;
-    margin: 0 10px;
+
+  .footer-column {
+    min-width: 100%;
   }
-  .footer-bottom a:hover {
-    color: #facc15;
+
+  .footer-logo {
+    justify-content: center;
+    margin-bottom: 20px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .footer-column {
-      min-width: 100%;
-    }
-    .footer-logo {
-      justify-content: center;
-      margin-bottom: 20px;
-     
-    }
-  }
+}
