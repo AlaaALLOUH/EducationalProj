@@ -154,12 +154,12 @@ nav a.active {
   /* تعديل ترتيب الهيدر ليكون عموديًا */
   header {
     flex-direction: column;
-    align-items: center;
-    padding-top: 70px;
   }
   
   .logo {
-    display: none;
+   margin-right: 350px;
+   
+   
   }
 }
 
